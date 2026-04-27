@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#060606"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5E7A3"/>
+      <stop offset="0.5" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#CD7F32"/>
+    </linearGradient>
+    <radialGradient id="warm" cx="50%" cy="55%" r="55%">
+      <stop offset="0" stop-color="#CD7F32" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#warm)"/>
+
+  <g transform="translate(600 540)" opacity="0.95">
+    <ellipse cx="0" cy="70" rx="320" ry="130" fill="#0F0F0F" stroke="rgba(212,175,55,0.18)" stroke-width="4"/>
+    <circle cx="0" cy="0" r="190" fill="#1A1A1A" stroke="url(#gold)" stroke-width="10"/>
+    <circle cx="0" cy="0" r="140" fill="#4A0E0E" opacity="0.35"/>
+    <g opacity="0.9">
+      <circle cx="-70" cy="-40" r="10" fill="url(#gold)"/>
+      <circle cx="20" cy="-75" r="8" fill="url(#gold)"/>
+      <circle cx="85" cy="-5" r="9" fill="url(#gold)"/>
+    </g>
+  </g>
+
+  <text x="70" y="110" fill="#F5F0E6" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="24" opacity="0.82">
+    Placeholder  replace with AI-generated kunafa photo
+  </text>
+  <text x="70" y="150" fill="#D4AF37" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="18" opacity="0.9">
+    Prompt: Kunafa dessert with gold leaf, Arabic sweets, elegant plating
+  </text>
+</svg>
+

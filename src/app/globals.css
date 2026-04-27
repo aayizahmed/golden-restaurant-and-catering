@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+@import "../styles/map.css";
+
+:root {
+  --background: #0a0a0a; /* rich black */
+  --foreground: #f5f0e6; /* warm cream */
+
+  --gold: #d4af37;
+  --charcoal: #1a1a1a;
+  --bronze: #cd7f32;
+  --burgundy: #4a0e0e;
+  --cream: #f5f0e6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair);
+  --font-arabic: var(--font-arabic);
+
+  --color-gold: var(--gold);
+  --color-charcoal: var(--charcoal);
+  --color-bronze: var(--bronze);
+  --color-burgundy: var(--burgundy);
+  --color-cream: var(--cream);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto,
+    Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 112px;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--gold) 35%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.lux-bg {
+  background:
+    radial-gradient(1200px 700px at 20% 15%, rgba(212, 175, 55, 0.14), transparent 55%),
+    radial-gradient(900px 600px at 75% 30%, rgba(205, 127, 50, 0.10), transparent 60%),
+    radial-gradient(1100px 700px at 55% 90%, rgba(74, 14, 14, 0.10), transparent 60%),
+    linear-gradient(180deg, #050505 0%, #0a0a0a 45%, #060606 100%);
+}
+
+.glass {
+  background: color-mix(in oklab, rgba(255, 255, 255, 0.07) 100%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(212, 175, 55, 0.16);
+}
+
+.gold-glow {
+  box-shadow:
+    0 0 0 1px rgba(212, 175, 55, 0.22) inset,
+    0 0 28px rgba(212, 175, 55, 0.12);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+
+/* ── Horizontal scroll ─────────────────────────────────────────────────────── */
+
+/* Wrapper: overflow-hidden so the track doesn't cause a horizontal scrollbar */
+.hs-wrapper {
+  overflow: hidden;
+}
+
+/* Track: flex row — GSAP will translate this */
+.hs-track {
+  height: 100vh;
+}
+
+/* Each panel fills the viewport */
+.hs-panel {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* Allow panels to scroll internally when content exceeds 100vh (e.g. catering form) */
+@media (min-width: 768px) {
+  .hs-panel {
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Hide the internal scrollbar — content still scrollable via touch/trackpad */
+    scrollbar-width: none;
+  }
+  .hs-panel::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* On mobile, panels stack vertically — reset all horizontal constraints */
+@media (max-width: 767px) {
+  .hs-wrapper,
+  .hs-track {
+    height: auto;
+    overflow: visible;
+  }
+  .hs-track {
+    flex-direction: column;
+  }
+  .hs-panel {
+    width: 100%;
+    min-height: auto;
+  }
+}
+

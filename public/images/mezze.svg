@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#060606"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <radialGradient id="ring" cx="50%" cy="52%" r="55%">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#D4AF37" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#CD7F32" stop-opacity="0.10"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5E7A3"/>
+      <stop offset="0.5" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#CD7F32"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="600" cy="470" r="280" fill="url(#ring)"/>
+  <circle cx="600" cy="470" r="240" fill="#0E0E0E" stroke="url(#gold)" stroke-width="10"/>
+  <g opacity="0.9">
+    <circle cx="520" cy="430" r="54" fill="#1A1A1A" stroke="#D4AF37" stroke-opacity="0.35" stroke-width="6"/>
+    <circle cx="680" cy="430" r="54" fill="#1A1A1A" stroke="#CD7F32" stroke-opacity="0.35" stroke-width="6"/>
+    <circle cx="600" cy="540" r="54" fill="#1A1A1A" stroke="#D4AF37" stroke-opacity="0.35" stroke-width="6"/>
+  </g>
+  <text x="70" y="110" fill="#F5F0E6" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="24" opacity="0.82">
+    Placeholder  replace with AI-generated mezze photo
+  </text>
+  <text x="70" y="150" fill="#D4AF37" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="18" opacity="0.9">
+    Prompt: Premium Middle Eastern mezze platter, black marble, candlelight, Michelin quality
+  </text>
+</svg>
+
