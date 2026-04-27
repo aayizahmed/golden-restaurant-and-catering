@@ -112,7 +112,7 @@ export function AboutSection() {
               <div className="absolute inset-0 bg-[radial-gradient(800px_450px_at_40%_30%,rgba(212,175,55,0.12),transparent_60%)]" />
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/images/golden-exterior-3.png"
+                  src="/images/golden-exterior-3.jpg"
                   alt="Golden Restaurant & Catering exterior"
                   fill
                   className="object-cover opacity-90"
