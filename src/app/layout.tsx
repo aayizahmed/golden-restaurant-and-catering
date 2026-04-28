@@ -37,6 +37,9 @@ export const metadata: Metadata = {
       "Luxury Middle Eastern fine dining in Fujairah — tradition, artistry, and modern sophistication.",
     type: "website",
   },
+  verification: {
+    google: "acH4Ordgo-Wo3tIrZ7y-YOFdeg2LGVRZYtHWq4IU2S4",
+  },
 };
 
 export default function RootLayout({
