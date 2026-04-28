@@ -93,7 +93,7 @@ export function Navbar() {
             <a href="#top" className="group flex items-center gap-2" aria-label="Golden Restaurant home" onClick={(e) => { e.preventDefault(); goToSection("top"); }}>
               <div className="relative size-10 overflow-hidden rounded-xl ring-1 ring-gold/30 shadow-[0_0_14px_rgba(212,175,55,0.25)] transition-shadow group-hover:shadow-[0_0_22px_rgba(212,175,55,0.45)]">
                 <Image
-                  src="/images/golden-logo.png"
+                  src="/images/golden-new-logo.jpg"
                   alt="Golden Restaurant logo"
                   fill
                   className="object-cover"

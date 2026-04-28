@@ -42,9 +42,9 @@ export const dishes = [
 ];
 
 export const galleryImages = [
-  { src: "/images/golden-exterior-1.jpg", alt: "Golden Restaurant & Catering – night exterior with food displays" },
-  { src: "/images/golden-exterior-2.jpg", alt: "Golden Restaurant – illuminated signage at night" },
-  { src: "/images/golden-exterior-3.jpg", alt: "Golden Restaurant – daytime facade with Kerala food banners" },
+  { src: "/images/gallery-1.jpg", alt: "Golden Restaurant – exterior view 1" },
+  { src: "/images/gallery-2.jpg", alt: "Golden Restaurant – exterior view 2" },
+  { src: "/images/gallery-3.jpg", alt: "Golden Restaurant – exterior view 3" },
 ];
 
 export const testimonials = [

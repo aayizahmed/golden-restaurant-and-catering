@@ -27,7 +27,7 @@ export function HeroSection() {
           >
             <div className="relative mx-auto size-28 overflow-hidden rounded-2xl shadow-[0_0_60px_rgba(212,175,55,0.4)] ring-2 ring-gold/35 sm:size-32">
               <Image
-                src="/images/golden-logo.png"
+                src="/images/golden-new-logo.jpg"
                 alt="Golden Restaurant logo"
                 fill
                 priority

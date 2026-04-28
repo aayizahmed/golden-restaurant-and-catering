@@ -88,13 +88,13 @@ export function MenuSection() {
     [],
   );
 
-  const tabs: { id: MenuTab; label: string; emoji: string }[] = [
-    { id: "breakfast", label: "Breakfast", emoji: "🌅" },
-    { id: "lunch", label: "Lunch", emoji: "🍛" },
-    { id: "indian", label: "Indian Menu", emoji: "🥘" },
-    { id: "chinese", label: "Chinese & Soups", emoji: "🍜" },
-    { id: "grills", label: "Grills & Broasted", emoji: "🍗" },
-    { id: "snacks", label: "Snacks & Juices", emoji: "🥤" },
+  const tabs: { id: MenuTab; label: string }[] = [
+    { id: "breakfast", label: "Breakfast" },
+    { id: "lunch", label: "Lunch" },
+    { id: "indian", label: "Indian Menu" },
+    { id: "chinese", label: "Chinese & Soups" },
+    { id: "grills", label: "Grills & Broasted" },
+    { id: "snacks", label: "Snacks & Juices" },
   ];
 
   return (
@@ -124,25 +124,13 @@ export function MenuSection() {
               type="button"
               onClick={() => setTab(t.id)}
               className={cn(
-                "group flex flex-col items-center gap-3 transition-all",
+                "group px-5 py-2.5 rounded-full border transition-all duration-300 hover:-translate-y-0.5",
+                tab === t.id
+                  ? "bg-gold/10 border-gold/40 text-gold shadow-[0_0_15px_rgba(212,175,55,0.15)]"
+                  : "bg-black/40 border-white/10 text-cream/70 hover:bg-white/10 hover:text-cream hover:border-gold/30"
               )}
             >
-              <div
-                className={cn(
-                  "flex size-20 items-center justify-center rounded-full text-3xl shadow-lg ring-1 transition-all duration-300 group-hover:scale-105 sm:size-24 sm:text-4xl",
-                  tab === t.id
-                    ? "bg-gold ring-gold/40 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
-                    : "bg-black/40 ring-white/10 group-hover:bg-white/10 group-hover:ring-gold/30",
-                )}
-              >
-                <span className="transition-transform duration-300 group-hover:-translate-y-1">{t.emoji}</span>
-              </div>
-              <span 
-                className={cn(
-                  "text-xs font-semibold tracking-wide transition-colors sm:text-sm",
-                  tab === t.id ? "text-gold" : "text-cream/60 group-hover:text-cream"
-                )}
-              >
+              <span className="text-xs font-semibold tracking-wide sm:text-sm">
                 {t.label.toUpperCase()}
               </span>
             </button>
